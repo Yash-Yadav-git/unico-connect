@@ -1,0 +1,146 @@
+.future-ready-container {
+  background: #1f1f1f;
+  padding: 70px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 80px 60px;
+  position: relative;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.future-ready-heading {
+  color: #fff;
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.xano-image {
+  width: 450px;
+  margin-top: 60px;
+}
+
+.future-ready-text {
+  color: #fff;
+  max-width: 520px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.future-ready-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.future-ready-tab-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  width: 100%;
+  margin-top: 60px;
+  position: sticky;
+  top: 70px;
+  align-self: flex-start;
+  z-index: 10;
+  background: #1f1f1f;
+}
+
+.future-ready-tab {
+  text-decoration: none;
+  padding: 20px;
+  color: #fff;
+}
+
+.future-ready-tab:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.future-ready-tab.active {
+  background-color: #000;
+  border-bottom: 2px solid #1a8ef7;
+}
+
+.future-ready-grid-nocode {
+  margin-top: 60px;
+}
+
+.future-ready-grid-lhs {
+  padding: 0 20px 20px;
+  position: sticky;
+  top: 250px;
+  align-self: flex-start;
+  z-index: 1;
+}
+
+.future-ready-grid-lhs p {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.4em;
+  font-family: "Inter", sans-serif;
+}
+
+.future-ready-grid-lhs ul {
+  color: #fff;
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.future-ready-grid-lhs ul li {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+
+@media (max-width: 1047px) {
+  .future-ready-heading {
+    font-size: 26px;
+  }
+  .xano-image {
+    margin-top: 0;
+    width: 440px;
+  }
+  .future-ready-text {
+    font-size: 14px;
+    width: 80%;
+  }
+}
+
+@media (max-width: 700px) {
+  .future-ready-container {
+    padding: 40px 20px 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .future-ready-heading {
+    font-size: 16px;
+  }
+  .xano-image {
+    margin-top: 0;
+    width: 250px;
+  }
+  .future-ready-text {
+    font-size: 12px;
+    width: 80%;
+  }
+  .future-ready-grid,
+  .future-ready-tab-container {
+    grid-template-columns: 1fr;
+  }
+
+  .future-ready-grid-nocode {
+    margin-top: 20px;
+  }
+
+  .future-ready-grid-lhs {
+    position: relative;
+    top: 0;
+    align-self: auto;
+  }
+}

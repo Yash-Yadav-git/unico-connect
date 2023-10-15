@@ -1,0 +1,80 @@
+/* Card.css */
+
+.card {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 60px;
+  padding: 45px 20px;
+  max-width: 500px;
+}
+
+.card-title {
+  color: #fff;
+  margin-bottom: 0;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.card-image {
+  max-width: 100%;
+}
+
+.card-content {
+  max-width: 320px;
+  color: #fff;
+  margin: 24px 0 30px;
+  font-weight: 300;
+  line-height: 1.4em;
+}
+
+.card-children-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card-child-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-child {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  border: 1px solid #888;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-child img {
+  width: 40px;
+  fill: #fff;
+}
+
+.card-children-container p {
+  color: #fff;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+}
+
+@media (max-width: 1047px) {
+  .card-title {
+    font-size: 24px;
+  }
+
+  .card-content,
+  .card-child p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    margin-bottom: 20px;
+  }
+}

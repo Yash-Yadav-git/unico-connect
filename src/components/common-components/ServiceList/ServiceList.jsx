@@ -24,7 +24,7 @@ const ServiceList = ({ userData, handleCardHover, hoveredCard, index }) => {
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
       </div>
-      <Button label={"Know More"} type={"white"} onClick={() => {}} />
+      <Button label={"Know More"} type={"primary"} onClick={() => {}} />
     </div>
   );
 };
