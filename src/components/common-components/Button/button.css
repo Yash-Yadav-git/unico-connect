@@ -1,0 +1,30 @@
+.button {
+  outline: none;
+  display: flex;
+  text-transform: uppercase;
+  width: 150px;
+  padding: 15px 20px;
+  cursor: pointer;
+  border: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-primary {
+  color: #ffffff;
+  background-color: #101010;
+}
+.button-white {
+  color: #101010;
+  background-color: #ffffff;
+  border: 1px solid #101010;
+}
+
+.button-white:hover {
+  color: #ffffff;
+  background-color: #198ef6;
+}
+
+.button-primary:hover {
+  background-color: #198ef6;
+}
