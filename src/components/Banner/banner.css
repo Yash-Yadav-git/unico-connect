@@ -62,10 +62,10 @@
 }
 
 @media (max-width: 1047px) {
-  .main-section-title {
+  .banner-title {
     font-size: 30px;
   }
-  .main-section-content {
+  .banner-sub-title {
     font-size: 18px;
   }
   .banner-features p {
@@ -73,10 +73,10 @@
   }
 }
 @media (max-width: 500px) {
-  .main-section-title {
+  .banner-title {
     font-size: 24px;
   }
-  .main-section-content {
+  .banner-sub-title {
     font-size: 14px;
   }
   .banner-feature-section {

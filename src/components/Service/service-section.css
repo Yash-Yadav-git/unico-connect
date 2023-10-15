@@ -1,0 +1,149 @@
+.service-section-container{
+  padding: 30px;
+}
+
+.service-section-header {
+  color: #101010;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.service-section-header-container {
+  display: flex;
+  align-items: center;
+}
+
+.services-section-title,
+.services-section-title-strike {
+  color: #198ef6;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.services-title-strike {
+  text-decoration: line-through;
+  margin: 0 8px;
+  font-weight: 400;
+}
+
+.service-section-users-container {
+  margin-top: 30px;
+}
+
+.service-card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background-color 0.3s ease;
+}
+
+.service-card-title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.service-card:nth-child(1) {
+  background-color: #ccfbc4;
+}
+
+.service-card:nth-child(2) {
+  background-color: #cde1fb;
+}
+
+.service-card:nth-child(3) {
+  background-color: #fcf6c7;
+}
+
+.service-card:nth-child(4) {
+  background-color: #fbcdcd;
+}
+
+.service-card.scaled .service-card-image {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.service-card-image {
+  width: 130px;
+  height: 130px;
+  border-radius: 65px;
+}
+
+.service-card-details {
+  color: #303030cc;
+  margin: 16px 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.service-card:hover {
+  background: #1f1f1f;
+  color: #ffffff;
+}
+
+.service-card:hover .service-card-details {
+  color: #ffffff;
+}
+
+.service-card:hover .btn {
+  background-color: #198ef6;
+}
+
+/* For large screens (4 cards in a row) */
+@media (min-width: 1048px) {
+  .service-section-users-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .service-card {
+    min-height: 460px;
+  }
+}
+
+/* For tablet screens (2 cards in a row) */
+@media (max-width: 1047px) {
+  .service-section-users-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .service-card {
+    min-height: 360px;
+  }
+  .service-card-image {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-section-users-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .service-card {
+    display: flex;
+    align-items: center;
+    min-height: 300px;
+  }
+
+  .service-card-image {
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+  }
+
+  .services-title,
+  .services-title-strike {
+    font-size: 18px;
+  }
+}
