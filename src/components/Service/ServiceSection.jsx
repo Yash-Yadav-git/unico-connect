@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Button from "../common-components/Button/Button";
 import "./service-section.css";
 import ServiceList from "../common-components/ServiceList/ServiceList";
 
@@ -10,9 +9,9 @@ const ServiceSection = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await fetch("https://randomuser.me/api/?results=4");
+        const response = await fetch("https://reqres.in/api/users");
         const data = await response.json();
-        const users = data.results;
+        const users = data.data.slice(0, 4);
         setUserData(users);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -21,10 +20,13 @@ const ServiceSection = () => {
     fetchUserData();
   }, []);
 
-  const handleCardHover = (index) =>
-    setHoveredCard((prevIndices) =>
-      prevIndices.includes(index) ? prevIndices : [...prevIndices, index]
-    );
+  const handleCardHover = (index) => {
+    setHoveredCard((prevIndices) => {
+      const newIndices = new Set(prevIndices);
+      newIndices.add(index);
+      return Array.from(newIndices);
+    });
+  };
 
   return (
     <div className="service-section-container">
@@ -34,9 +36,11 @@ const ServiceSection = () => {
         <p className="services-title-strike">Unique</p>
         <p className="services-section-title">Unico Approach</p>
       </div>
+      {userData.length > 0 ? (
         <div className="service-section-users-container">
           {userData.map((user, index) => (
             <ServiceList
+              key={index}
               userData={user}
               hoveredCard={hoveredCard}
               handleCardHover={handleCardHover}
@@ -44,7 +48,8 @@ const ServiceSection = () => {
             />
           ))}
         </div>
-      </div>
+      ) : null}
+    </div>
   );
 };
 

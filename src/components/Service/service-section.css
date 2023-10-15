@@ -1,4 +1,4 @@
-.service-section-container{
+.service-section-container {
   padding: 30px;
 }
 
@@ -96,7 +96,6 @@
   background-color: #198ef6;
 }
 
-/* For large screens (4 cards in a row) */
 @media (min-width: 1048px) {
   .service-section-users-container {
     display: grid;
@@ -108,7 +107,6 @@
   }
 }
 
-/* For tablet screens (2 cards in a row) */
 @media (max-width: 1047px) {
   .service-section-users-container {
     display: grid;
